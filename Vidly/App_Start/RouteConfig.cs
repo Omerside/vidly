@@ -25,6 +25,12 @@ namespace Vidly
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "CustomersDefault",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Customers", action = "Details", id = UrlParameter.Optional }
+            );
         }
     }
 }
