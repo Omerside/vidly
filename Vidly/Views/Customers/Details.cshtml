@@ -1,20 +1,8 @@
-﻿@model Vidly.ViewModels.CustomerViewModel
+﻿@model Vidly.Models.Customer
+
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@{
-    String id = ViewContext.RouteData.Values["id"].ToString();
-}
-
-@foreach (var customer in Model.Customers)
-{
-
-
-    if (customer.Id.ToString() == id)
-    {
-        @customer.Name
-    }
-
-}
+<h2>@Model.Name</h2>

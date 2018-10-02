@@ -46,6 +46,7 @@ namespace Vidly.Controllers
             return Content("id=" + id);
         }
 
+        /*
         public ActionResult Index(int? pageIndex, string sortBy)
         {
             if (!pageIndex.HasValue)
@@ -59,6 +60,22 @@ namespace Vidly.Controllers
             }
 
             return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+        }*/
+
+        public ActionResult Index()
+        {
+
+            return View(GetMovies());
+        }
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            var movies = new List<Movie>
+            {
+                new Movie {Name = "Shrek 1"},
+                new Movie {Name = "Shek 2"}
+            };
+            return movies;
         }
     }
 }
