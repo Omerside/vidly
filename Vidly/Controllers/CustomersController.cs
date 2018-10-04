@@ -10,10 +10,25 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
+        // Define the variable that will hold the DB for our application
+        private ApplicationDbContext _context;
+
+        public CustomersController()
+        {
+            // Reference our DB to the variable previously defined inside of the default constructor.
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            // override Dispose to dispose our assigned DB reference
+            _context.Dispose();
+        }
+        
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = GetCustomer();
+            var customers = _context.Customers;
 
             return View(customers);
             //return View(customers);
@@ -27,7 +42,7 @@ namespace Vidly.Controllers
         public ActionResult Details(int id)
         {
             
-            var customerResult = GetCustomer().SingleOrDefault(customer => customer.Id == id);
+            var customerResult = _context.Customers.SingleOrDefault(customer => customer.Id == id);
             
             if (customerResult == null)
             {
@@ -36,19 +51,22 @@ namespace Vidly.Controllers
             {
                return View(customerResult);
             }
-            //id.ToString());
 
         }
 
+        /* This is what I did before setting up a database with Customer objects
         private IEnumerable<Customer> GetCustomer()
         {
+                    
             var customers = new List<Customer>
             {
                 new Customer {Name = "Joe Shmoe", Id = 1},
                 new Customer {Name = "Jane Shmane", Id = 2}
             };
+            
 
             return customers;
         }
+        */
     }
 }
