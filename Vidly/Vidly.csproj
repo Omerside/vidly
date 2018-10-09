@@ -226,6 +226,22 @@
     <Compile Include="Migrations\201810082019205_AddNameToMembershipType.Designer.cs">
       <DependentUpon>201810082019205_AddNameToMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810082047216_AddDOBToCustomer.cs" />
+    <Compile Include="Migrations\201810082047216_AddDOBToCustomer.Designer.cs">
+      <DependentUpon>201810082047216_AddDOBToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810082058294_PopulateCustomerDob.cs" />
+    <Compile Include="Migrations\201810082058294_PopulateCustomerDob.Designer.cs">
+      <DependentUpon>201810082058294_PopulateCustomerDob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810082103118_PopulateCustomerDobCorrection.cs" />
+    <Compile Include="Migrations\201810082103118_PopulateCustomerDobCorrection.Designer.cs">
+      <DependentUpon>201810082103118_PopulateCustomerDobCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810082107573_AllowNullableDob.cs" />
+    <Compile Include="Migrations\201810082107573_AllowNullableDob.Designer.cs">
+      <DependentUpon>201810082107573_AllowNullableDob.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -338,6 +354,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810082019205_AddNameToMembershipType.resx">
       <DependentUpon>201810082019205_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810082047216_AddDOBToCustomer.resx">
+      <DependentUpon>201810082047216_AddDOBToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810082058294_PopulateCustomerDob.resx">
+      <DependentUpon>201810082058294_PopulateCustomerDob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810082103118_PopulateCustomerDobCorrection.resx">
+      <DependentUpon>201810082103118_PopulateCustomerDobCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810082107573_AllowNullableDob.resx">
+      <DependentUpon>201810082107573_AllowNullableDob.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

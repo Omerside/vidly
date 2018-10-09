@@ -6,3 +6,13 @@
 }
 
 <h2>@Model.Name</h2>
+<ul>
+    <li>Membership Type: @Model.MembershipType.MembershipName</li>
+    @if (Model.DateOfBirth != null)
+    {
+        <li>DOB: @Model.DateOfBirth.Value.ToShortDateString()</li>
+    }
+
+</ul>
+
+
