@@ -242,6 +242,18 @@
     <Compile Include="Migrations\201810082107573_AllowNullableDob.Designer.cs">
       <DependentUpon>201810082107573_AllowNullableDob.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810300022029_AddMoviePropertyGenre.cs" />
+    <Compile Include="Migrations\201810300022029_AddMoviePropertyGenre.Designer.cs">
+      <DependentUpon>201810300022029_AddMoviePropertyGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810300028480_AddMovieDbContextAndPropertyGenre.cs" />
+    <Compile Include="Migrations\201810300028480_AddMovieDbContextAndPropertyGenre.Designer.cs">
+      <DependentUpon>201810300028480_AddMovieDbContextAndPropertyGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.cs" />
+    <Compile Include="Migrations\201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.Designer.cs">
+      <DependentUpon>201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -366,6 +378,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810082107573_AllowNullableDob.resx">
       <DependentUpon>201810082107573_AllowNullableDob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810300022029_AddMoviePropertyGenre.resx">
+      <DependentUpon>201810300022029_AddMoviePropertyGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810300028480_AddMovieDbContextAndPropertyGenre.resx">
+      <DependentUpon>201810300028480_AddMovieDbContextAndPropertyGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.resx">
+      <DependentUpon>201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
