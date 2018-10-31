@@ -254,9 +254,22 @@
     <Compile Include="Migrations\201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.Designer.cs">
       <DependentUpon>201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810302128213_SeedDbWithMovieData.cs" />
+    <Compile Include="Migrations\201810302128213_SeedDbWithMovieData.Designer.cs">
+      <DependentUpon>201810302128213_SeedDbWithMovieData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810302321001_AddGenreSchema.cs" />
+    <Compile Include="Migrations\201810302321001_AddGenreSchema.Designer.cs">
+      <DependentUpon>201810302321001_AddGenreSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810302325346_UpdateMovieModel.cs" />
+    <Compile Include="Migrations\201810302325346_UpdateMovieModel.Designer.cs">
+      <DependentUpon>201810302325346_UpdateMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -387,6 +400,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.resx">
       <DependentUpon>201810300035146_AddMoviePropertiesReleaseDateAddedDateStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810302128213_SeedDbWithMovieData.resx">
+      <DependentUpon>201810302128213_SeedDbWithMovieData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810302321001_AddGenreSchema.resx">
+      <DependentUpon>201810302321001_AddGenreSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810302325346_UpdateMovieModel.resx">
+      <DependentUpon>201810302325346_UpdateMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

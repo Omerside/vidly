@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
@@ -10,6 +9,22 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+
+        // Define the variable that will hold the DB for our application
+        private ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            // Reference our DB to the variable previously defined inside of the default constructor.
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            // override Dispose to dispose our assigned DB reference
+            _context.Dispose();
+        }
+
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
@@ -64,9 +79,11 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-
-            return View(GetMovies());
+            var movies = _context.Movies.ToList();
+            return View(movies);
         }
+
+
 
         private IEnumerable<Movie> GetMovies()
         {
