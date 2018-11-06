@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-//model folder should be reserved for DOMAIN classes.
-
 namespace Vidly.Models
 {
     public class Customer

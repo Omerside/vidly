@@ -7,14 +7,15 @@
 <h2>Movies</h2>
 <table class="table table-bordered table-hover">
     <tr>
-        <th>Movies</th>
+        <th>Movie Name</th>
+        <th>Genre</th>
     </tr>
 
     @foreach (var movie in Model)
     {
     <tr>
         <td>@movie.Name</td>
-        <td>@movie.Genre</td>
+        <td>@movie.Genre.GenreName</td>
     </tr>
     }
 

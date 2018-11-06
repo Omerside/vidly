@@ -38,6 +38,11 @@ namespace Vidly.Controllers
             //return new EmptyResult();
             //return RedirectToAction("Index", "Home", new {page = 1, sortBy = "name"});
         }
+
+        public ActionResult New()
+        {
+            return View();
+        }
         
 
         public ActionResult Details(int id)
