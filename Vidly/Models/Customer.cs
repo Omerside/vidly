@@ -14,11 +14,14 @@ namespace Vidly.Models
         [StringLength(255)] //Makes it so "Name" can only be up to 255 characters
         public string Name { get; set; }
 
-        
+        [Display(Name = "Date Of Birth")]
         public Nullable<DateTime> DateOfBirth { get; set; }
 
         public bool IsSubscribedToNewsletter { get; set; }
+
         public MembershipType MembershipType { get; set; }
+
+        [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
     }
 }
