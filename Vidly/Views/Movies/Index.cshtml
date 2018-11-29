@@ -5,6 +5,10 @@
 }
 
 <h2>Movies</h2>
+<a href="/Movies/New" class="btn btn-primary">New Movie</a>
+
+
+<br><br />
 <table class="table table-bordered table-hover">
     <tr>
         <th>Movie Name</th>
@@ -13,11 +17,12 @@
 
     @foreach (var movie in Model)
     {
-    <tr>
-        <td>@movie.Name</td>
-        <td>@movie.Genre.GenreName</td>
-    </tr>
+        <tr>
+            <td>@Html.ActionLink(movie.Name, "Edit", new { id = movie.Id }, null)</td>
+            <td>@movie.Genre.GenreName</td>
+        </tr>
     }
 
-</table>
+    
 
+</table>

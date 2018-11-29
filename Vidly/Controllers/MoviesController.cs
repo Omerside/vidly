@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity.Validation;
 
 namespace Vidly.Controllers
 {
@@ -49,34 +50,36 @@ namespace Vidly.Controllers
             };
 
             return View(viewModel);
-            // return Content("Hello World!");
-            //return HttpNotFound();
-            //return new EmptyResult();
-            //return RedirectToAction("Index", "Home", new {page = 1, sortBy = "name"});
         }
 
-        [Route("movies/released/{year}/{month:regex(\\d{4}):range(1, 12)}")]
+        //[Route("movies/released/{year}/{month:regex(\\d{4}):range(1, 12)}")]
+
+        public ActionResult New()
+        {
+            var genreInput = _context.Genre.ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                genre = genreInput
+            };
+            return View("MovieForm", viewModel);
+        }
 
         public ActionResult Edit(int id)
         {
-            return Content("id=" + id);
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                movie = movie,
+                genre = _context.Genre.ToList()
+            };
+
+            return View("MovieForm", viewModel);
         }
 
-        /*
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if (!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
 
-            if (String.IsNullOrWhiteSpace(sortBy))
-            {
-                sortBy = "name";
-            }
-
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
-        }*/
 
         public ActionResult Index()
         {
@@ -94,6 +97,26 @@ namespace Vidly.Controllers
                 new Movie {Name = "Shek 2"}
             };
             return movies;
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+
+            if (movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+
+            try
+            {
+                _context.SaveChanges();
+            } catch (DbEntityValidationException e)
+            {
+                Console.WriteLine(e);
+            }
+
+            return RedirectToAction("Index", "Movies");
         }
     }
 }

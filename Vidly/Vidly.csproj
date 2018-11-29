@@ -270,6 +270,42 @@
     <Compile Include="Migrations\201810312300555_SeedMovieData.Designer.cs">
       <DependentUpon>201810312300555_SeedMovieData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811282322364_UpdateMovieDisplayNamesAndRequirements.cs" />
+    <Compile Include="Migrations\201811282322364_UpdateMovieDisplayNamesAndRequirements.Designer.cs">
+      <DependentUpon>201811282322364_UpdateMovieDisplayNamesAndRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811282324483_MakeDatesNullable.cs" />
+    <Compile Include="Migrations\201811282324483_MakeDatesNullable.Designer.cs">
+      <DependentUpon>201811282324483_MakeDatesNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290049164_RemoveGenreIdDisplayName.cs" />
+    <Compile Include="Migrations\201811290049164_RemoveGenreIdDisplayName.Designer.cs">
+      <DependentUpon>201811290049164_RemoveGenreIdDisplayName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290049599_RemoveGenreIdDisplayName2.cs" />
+    <Compile Include="Migrations\201811290049599_RemoveGenreIdDisplayName2.Designer.cs">
+      <DependentUpon>201811290049599_RemoveGenreIdDisplayName2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290051209_AddMovieAlterations1.cs" />
+    <Compile Include="Migrations\201811290051209_AddMovieAlterations1.Designer.cs">
+      <DependentUpon>201811290051209_AddMovieAlterations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290054158_AddMovieAlterations3.cs" />
+    <Compile Include="Migrations\201811290054158_AddMovieAlterations3.Designer.cs">
+      <DependentUpon>201811290054158_AddMovieAlterations3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290059003_AddMovieAlterations4.cs" />
+    <Compile Include="Migrations\201811290059003_AddMovieAlterations4.Designer.cs">
+      <DependentUpon>201811290059003_AddMovieAlterations4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290104552_AddMovieAlterations5.cs" />
+    <Compile Include="Migrations\201811290104552_AddMovieAlterations5.Designer.cs">
+      <DependentUpon>201811290104552_AddMovieAlterations5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290107169_AddMovieAlterations6.cs" />
+    <Compile Include="Migrations\201811290107169_AddMovieAlterations6.Designer.cs">
+      <DependentUpon>201811290107169_AddMovieAlterations6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -282,6 +318,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -350,6 +387,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -418,6 +456,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810312300555_SeedMovieData.resx">
       <DependentUpon>201810312300555_SeedMovieData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811282322364_UpdateMovieDisplayNamesAndRequirements.resx">
+      <DependentUpon>201811282322364_UpdateMovieDisplayNamesAndRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811282324483_MakeDatesNullable.resx">
+      <DependentUpon>201811282324483_MakeDatesNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290049164_RemoveGenreIdDisplayName.resx">
+      <DependentUpon>201811290049164_RemoveGenreIdDisplayName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290049599_RemoveGenreIdDisplayName2.resx">
+      <DependentUpon>201811290049599_RemoveGenreIdDisplayName2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290051209_AddMovieAlterations1.resx">
+      <DependentUpon>201811290051209_AddMovieAlterations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290054158_AddMovieAlterations3.resx">
+      <DependentUpon>201811290054158_AddMovieAlterations3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290059003_AddMovieAlterations4.resx">
+      <DependentUpon>201811290059003_AddMovieAlterations4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290104552_AddMovieAlterations5.resx">
+      <DependentUpon>201811290104552_AddMovieAlterations5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290107169_AddMovieAlterations6.resx">
+      <DependentUpon>201811290107169_AddMovieAlterations6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
