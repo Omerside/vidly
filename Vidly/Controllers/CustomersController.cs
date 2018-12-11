@@ -66,6 +66,19 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
+            
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+
+
+                return View("CustomerForm", viewModel);
+            }
+
 
             if (customer.Id == 0)
             {
@@ -81,6 +94,7 @@ namespace Vidly.Controllers
                 //This method works but is automated and can open security flaws
                 //TryUpdateModel(customerInDb);
             }
+
 
             _context.SaveChanges();
             return RedirectToAction("Index", "Customers");

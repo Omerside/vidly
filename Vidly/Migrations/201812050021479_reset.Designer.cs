@@ -7,13 +7,13 @@ namespace Vidly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddMoviePropertiesReleaseDateAddedDateStock : IMigrationMetadata
+    public sealed partial class reset : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddMoviePropertiesReleaseDateAddedDateStock));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(reset));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810300035146_AddMoviePropertiesReleaseDateAddedDateStock"; }
+            get { return "201812050021479_reset"; }
         }
         
         string IMigrationMetadata.Source

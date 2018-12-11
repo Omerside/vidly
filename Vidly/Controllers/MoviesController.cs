@@ -103,18 +103,9 @@ namespace Vidly.Controllers
         public ActionResult Save(Movie movie)
         {
 
-            if (movie.Id == 0)
-            {
-                _context.Movies.Add(movie);
-            }
+            _context.Movies.Add(movie);
+            _context.SaveChanges();
 
-            try
-            {
-                _context.SaveChanges();
-            } catch (DbEntityValidationException e)
-            {
-                Console.WriteLine(e);
-            }
 
             return RedirectToAction("Index", "Movies");
         }
